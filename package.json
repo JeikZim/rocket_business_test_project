@@ -1,11 +1,25 @@
 {
   "name": "rb_test",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.1",
+  "description": "Выполнение тестового задания Junior React-разработчика для Rocket Business",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "cross-env NODE_ENV=production node app.js",
+    "server": "nodemon app.js",
+    "client": "npm run start --prefix rb_test_client", 
+    "client:install": "npm install --prefix rb_test_client",
+    "client:build": "npm run build --prefix rb_test_client",
+    "dev": "cross-env NODE_ENV=development concurrently \"npm run server\" \"npm run client\""
   },
-  "author": "Ruslan Bagautdinov <bagautdinovwruslan@gmail.com>",
-  "license": "ISC"
+  "author": "Bagautdinov Ruslan <bagautdinovwruslan@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.9",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1",
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.22"
+  }
 }
