@@ -1,6 +1,6 @@
 import React from "react"
 
-function FAQ() {
+function FAQ(props) {
     const questions = [ { header: 1, content: [ "Абзац 1", "Абзац 2" ] }, { header: 2, content: [ "Абзац 1" ] }]
 
     return (
