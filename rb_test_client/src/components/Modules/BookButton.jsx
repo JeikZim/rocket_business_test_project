@@ -1,11 +1,13 @@
 import React from "react"
 
-function BookButton(isShort) {
+import styles from "../../styles/components/Modules/BookButton.module.css"
+
+function BookButton(props) {
 
     // TODO: Сделать подгрузку текста из JSON
     return (
-        <button onClick={openPopUp}>
-            { isShort ? "Записаться" : "Записаться на приём"} 
+        <button className={styles.btn} onClick={openPopUp}>
+            { props.isShort ? "Записаться" : "Записаться на приём"} 
         </button>
     )
 }

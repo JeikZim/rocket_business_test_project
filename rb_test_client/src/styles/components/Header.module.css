@@ -1,0 +1,71 @@
+.wrapper { width: 1140px; }
+
+.up .wrapper, .up, .bottom, .left, .right, .phone_number, .phone_number span, .address, .address div {
+    display: flex;
+}
+
+.up .wrapper { justify-content: space-between; }
+
+.up {
+    justify-content: center;
+
+    height: 67px;
+    width: 100%;
+}
+
+.left, .right { align-items: center; }
+
+/* Left part */
+.logo {
+    margin-right: 20.55px;
+}
+
+.address {
+    --span-line-height: 21px;
+
+    flex-direction: row;
+
+    height: 38px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.address svg { margin-right: 1px; } 
+
+.address div {
+    flex-direction: column;
+}
+
+.address span {
+    font-size: 14px;
+    line-height: var(--span-line-height);
+}
+
+.address .subtitle { 
+    color: var(--gray-font); 
+    line-height: calc(var(--span-line-height) - 4px);
+}
+
+/* Right part */
+.phone_number {
+    flex-direction: row;
+    margin-right: 35px;
+}
+
+.phone_number img {
+    margin-right: 9px;
+}
+
+.phone_number span {
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom {
+    justify-content: center;
+
+    height: 43px;
+    width: 100%;
+    
+    background-color: var(--nav-bg);
+}

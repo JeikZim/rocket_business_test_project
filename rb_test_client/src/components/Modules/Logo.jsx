@@ -2,7 +2,7 @@ import React from "react";
 
 function Logo() {
     return (
-        <>Logo</>
+        <img src="./images/logo_green.svg" alt="Logo" />
     )
 }
 

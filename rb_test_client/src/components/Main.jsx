@@ -6,6 +6,8 @@ import Slider from "./MainSections/Slider"
 function Main() {
     return (
         <main>
+            {/* Скрытый заголовок h1 для семантики */}
+            <h1 className="visually-hidden">Многопрофильная клиника для детей и взрослых</h1>
             <MainPresentation />
             <FAQ />
             <Slider />

@@ -5,7 +5,7 @@ function MainPresentation() {
         <section>
             <div> 
                 {/* Большой полупустой див с дивом внутри, который в свою очередь содержит h1 и p*/} 
-                <h1>Многопрофильная клиника для детей и взрослых</h1>
+                <h2>Многопрофильная клиника для детей и взрослых</h2>
                 <p>
                     Lorem ipsum dolor sit amet, 
                     consectetur adipiscing elit, sed do eiusmod tempor 

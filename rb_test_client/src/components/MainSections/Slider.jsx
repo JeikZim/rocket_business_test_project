@@ -1,8 +1,8 @@
 import React from "react";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import { Navigation, Pagination, Controller } from "swiper/modules";
-import BookButton from "../Modules/BookButton";
-import ShowMoreButton from "../Modules/ShowMoreButton";
+import BookButton from "../modules/BookButton";
+import ShowMoreButton from "../modules/ShowMoreButton";
 
 import "swiper/css";
 
@@ -31,7 +31,7 @@ function Slider() {
 
     return (
         <section className="swiper-section">
-            <h2>Услуги</h2> {/* Скрыть с помощью CSS так, чтобы в HTML продолжал существовать */}
+            <h2 className="visually-hidden">Услуги</h2>
             <Swiper
                 modules={[Navigation, Pagination]}
                 spaceBetween={50}
@@ -56,7 +56,7 @@ function Slider() {
 function SlideCard(props) {
     return (
         <div>
-            <img src="" alt="" srcset="" />
+            <img src="" alt="" srcSet=""/>
             <div>
                 <svg> SVG обрезанного фона  </svg>
 
