@@ -1,9 +1,9 @@
 import React from "react";
 import Navbar from "./Navbar";
 
-import s from "../styles/components/Footer.module.css"
+import data from "../data/global.json"
 
-console.log(s);
+import s from "../styles/components/Footer.module.css"
 
 function Footer() {
     return (
@@ -25,17 +25,17 @@ function SocialMediaIconsGroup() {
     return (
         <div className={s.social_media}>
             <div className={s.social_media_icon}>
-                <a target="_blank" href="https://www.instagram.com">
+                <a target="_blank" href={data.links.instagram}>
                     <img src="./images/ic-instagram.svg" alt="Instagram icon" />
                 </a>
             </div>
             <div className={s.social_media_icon}>
-                <a target="_blank" href="https://www.whatsapp.com/">
+                <a target="_blank" href={data.links.whatsapp}>
                     <img src="./images/ic-whats_app_2.svg" alt="WhatsApp icon" />
                 </a>
             </div>
             <div className={s.social_media_icon}>
-                <a target="_blank" href="https://telegram.org/">
+                <a target="_blank" href={data.links.telegram}>
                     <img src="./images/ic-telegram.png" alt="Telegram icon" />
                 </a>
             </div>

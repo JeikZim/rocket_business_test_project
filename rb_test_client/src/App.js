@@ -1,8 +1,22 @@
 import "./styles/components/App.css";
 import MainPage from "./pages/MainPage";
+import AddressContext from "./context/LocationContext";
+import useLocation from "./hooks/location.hook";
 
 function App() {
-    return <MainPage />;
+    const { changeLocation, locationNumber, location } = useLocation()
+
+    return (
+        <AddressContext.Provider
+            value={{
+                changeLocation, 
+                locationNumber, 
+                location
+            }}
+        >
+            <MainPage />
+        </AddressContext.Provider>
+    );
 }
 
 export default App;

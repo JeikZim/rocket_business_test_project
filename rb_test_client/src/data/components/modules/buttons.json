@@ -3,7 +3,5 @@
         "longText": "Записаться на приём",
         "shortText": "Записаться"
     },
-    "showMoreBtn": {
-        "moreDetailsButton": "Подробнее"
-    }
+    "showMoreBtn":  "Подробнее"
 }

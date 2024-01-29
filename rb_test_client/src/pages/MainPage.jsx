@@ -5,6 +5,7 @@ import MainPresentation from "../components/sections/MainPresentation"
 import Slider from "../components/sections/Slider"
 import Footer from "../components/Footer";
 
+import data from "../data/pages/main/main.page.json"
 
 function MainPage() {
     useEffect(() => {
@@ -18,7 +19,7 @@ function MainPage() {
 
             <main>
                 {/* Скрытый заголовок h1 для семантики */}
-                <h1 className="visually-hidden">Многопрофильная клиника для детей и взрослых</h1>
+                <h1 className="visually-hidden">{data.body.h1}</h1>
                 <MainPresentation />
                 <FAQ />
                 <Slider />

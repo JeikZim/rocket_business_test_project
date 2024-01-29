@@ -1,6 +1,6 @@
 .wrapper { width: 1140px; }
 
-.up .wrapper, .up, .bottom, .left, .right, .phone_number, .phone_number span, .address, .address div {
+.up .wrapper, .up, .bottom, .left, .right, .phone_number, .phone_number span, .location, .location div {
     display: flex;
 }
 
@@ -20,7 +20,7 @@
     margin-right: 20.55px;
 }
 
-.address {
+.location {
     --span-line-height: 21px;
 
     flex-direction: row;
@@ -30,18 +30,18 @@
     font-weight: 400;
 }
 
-.address svg { margin-right: 1px; } 
+.location svg { margin-right: 1px; } 
 
-.address div {
+.location div {
     flex-direction: column;
 }
 
-.address span {
+.location span {
     font-size: 14px;
     line-height: var(--span-line-height);
 }
 
-.address .subtitle { 
+.location .subtitle { 
     color: var(--gray-font); 
     line-height: calc(var(--span-line-height) - 4px);
 }

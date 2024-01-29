@@ -1,10 +1,12 @@
 import React from "react"
 
+import data from "../../data/components/modules/buttons.json"
+
 function ShowMoreButton() {
 
     return (
         <button onClick={showMore}>
-            Подробнее
+            {data.showMoreBtn}
         </button>
     )
 }

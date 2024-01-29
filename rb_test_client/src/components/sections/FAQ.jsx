@@ -1,16 +1,18 @@
 import React from "react"
 
+import data from "../../data/pages/main/faq.section.json"
+
 function FAQ(props) {
-    const questions = [ { header: 1, content: [ "Абзац 1", "Абзац 2" ] }, { header: 2, content: [ "Абзац 1" ] }]
+    const questions = data.questions
 
     return (
         <section>
             <div>
-                <h2>ЧаВо</h2>
+                <h2>{data.title}</h2>
             </div>
             <div> {/* wrapper */}
                 { questions.map((question, index) => {
-                    return <Question title={question.header} content={question.content} key={index} />
+                    return <Question title={question.title} content={question.content} key={index} />
                 }) }
             </div>
         </section>
