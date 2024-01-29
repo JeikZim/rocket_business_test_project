@@ -1,0 +1,12 @@
+{
+    "faqContent": {
+        "title": "Часто задаваемые вопросы",
+        "questions": [
+            { "title": "Заголовок 1", "content": ["Blandit et et ac non interdum odio tristique diam vestibulum. Velit in quis consequat lacus fringilla amet elementum pharetra massa. Morbi euismod nulla cras adipiscing tristique aliquet purus adipiscing. "] },
+            { "title": "Заголовок 2", "content": ["Абзац 1", "Абзац 2"] },
+            { "title": "Заголовок 3", "content": ["Абзац 1", "Абзац 2"] },
+            { "title": "Заголовок 4", "content": ["Абзац 1", "Абзац 2"] },
+            { "title": "Заголовок 5", "content": ["Абзац 1", "Абзац 2"] }
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "title": "Запишитесь на приём онлайн",
+    "content": "Администратор свяжется с Вами через WhatsApp в течение дня и уточнит детали",
+    "form": {
+        "fullnamePlaceholder": "ФИО",
+        "phonePlaceholder": "Номер телефона",
+        "emailPlaceholder": "Электронная почта"
+    },
+    "formLink": "#"
+}

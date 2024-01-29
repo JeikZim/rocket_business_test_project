@@ -1,0 +1,9 @@
+{
+    "bookingBtn": {
+        "longText": "Записаться на приём",
+        "shortText": "Записаться"
+    },
+    "showMoreBtn": {
+        "moreDetailsButton": "Подробнее"
+    }
+}

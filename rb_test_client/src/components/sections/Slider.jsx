@@ -1,7 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-import { Navigation, Pagination, Controller } from "swiper/modules";
-import BookButton from "../modules/BookButton";
+import { Navigation, Pagination } from "swiper/modules";
+import BookingButton from "../modules/BookingButton";
 import ShowMoreButton from "../modules/ShowMoreButton";
 
 import "swiper/css";
@@ -81,7 +81,7 @@ function SlideCard(props) {
 
                 <div>
                     {/* Кнопки */}
-                    <BookButton />
+                    <BookingButton />
                     <ShowMoreButton />
                 </div>
             </div>

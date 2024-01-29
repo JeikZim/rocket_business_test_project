@@ -1,0 +1,14 @@
+{
+    "phoneNumber": "+7(863) 000 00 00",
+    "addresses": [
+        { "city": "Ростов-на-Дону", "street": "ул. Ленина", "house": "2Б" },
+        { "city": "Ростов-на-Дону", "street": "пр. Соколова", "house": "62" },
+        { "city": "Новошахтинск", "street": "пр. Ленина", "house": "24" }
+    ],
+    "links": {
+        "instagram": "https://www.instagram.com",
+        "whatsapp": "https://www.whatsapp.com/",
+        "telegram": "https://telegram.org/"
+    }
+    
+}

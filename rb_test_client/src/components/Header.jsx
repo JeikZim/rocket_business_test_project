@@ -1,5 +1,5 @@
 import React from "react"
-import BookButton from "./modules/BookButton";
+import BookButton from "./modules/BookingButton";
 import Navbar from "./Navbar";
 
 import s from "../styles/components/Header.module.css"

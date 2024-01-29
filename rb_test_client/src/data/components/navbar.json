@@ -1,0 +1,24 @@
+{
+    "navLinks": {
+        "aboutUs": {
+            "name": "О нас",
+            "link": "#"
+        },
+        "services": {
+            "name": "Услуги",
+            "link": "#"
+        },
+        "specialists": {
+            "name": "Специалисты",
+            "link": "#"
+        },
+        "price": {
+            "name": "Цены",
+            "link": "#"
+        },
+        "contacts": {
+            "name": "Контакты",
+            "link": "#"
+        }
+    }
+}
