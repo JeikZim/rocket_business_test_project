@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Header from "../components/Header";
 import FAQ from "../components/sections/FAQ";
-import MainPresentation from "../components/sections/MainPresentation"
+import Presentation from "../components/sections/Presentation"
 import Slider from "../components/sections/Slider"
 import Footer from "../components/Footer";
 
@@ -20,7 +20,7 @@ function MainPage() {
             <main>
                 {/* Скрытый заголовок h1 для семантики */}
                 <h1 className="visually-hidden">{data.body.h1}</h1>
-                <MainPresentation />
+                <Presentation />
                 <FAQ />
                 <Slider />
             </main>

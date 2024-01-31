@@ -1,0 +1,66 @@
+.presentation {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    
+    background-color: var(--light-gray);
+
+    height: var(--presentation-height);
+    width: 100%;
+}
+
+.wrapper {
+    position: relative;
+    z-index: 1;
+
+    width: var(--content-feed-width);
+}
+
+.left_half {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    
+    margin-top: 144px;
+
+    height: 100%;
+    width: calc(var(--content-feed-width) / 2);
+}
+
+.left_half h2 {
+    display: flex;
+
+    width: 360px;
+
+    margin-bottom: 14px;
+
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.left_half p {
+    display: flex;
+
+    width: 367px;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+}
+
+.image_wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.image_wrapper img {
+    /* Половина ширины экрана и минус ширина скроллбара */
+    width: calc(100vw / 2 - var(--scrollbar-width));
+    height:  var(--presentation-height);
+    object-fit: cover;
+}

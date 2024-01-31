@@ -1,4 +1,3 @@
-import "./styles/components/App.css";
 import MainPage from "./pages/MainPage";
 import AddressContext from "./context/LocationContext";
 import useLocation from "./hooks/location.hook";

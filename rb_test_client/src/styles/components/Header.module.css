@@ -1,4 +1,6 @@
-.wrapper { width: 1140px; }
+.wrapper { 
+    width: var(--content-feed-width) 
+}
 
 .up .wrapper, .up, .bottom, .left, .right, .phone_number, .phone_number span, .location, .location div {
     display: flex;
@@ -17,7 +19,11 @@
 
 /* Left part */
 .logo {
-    margin-right: 20.55px;
+    margin-right: 18.55px;
+    margin-left: 2px;
+    margin-top: 2px;
+    width: 92px;
+    height: 28px;
 }
 
 .location {
@@ -30,15 +36,21 @@
     font-weight: 400;
 }
 
-.location svg { margin-right: 1px; } 
+.location svg { margin-right: 1px; margin-left: 1px; } 
 
 .location div {
+    margin-left: 2.25px;
     flex-direction: column;
 }
 
 .location span {
     font-size: 14px;
+}
+
+.location .title {
+    margin-top: 1.85px;
     line-height: var(--span-line-height);
+    margin-bottom: -2px;
 }
 
 .location .subtitle { 
@@ -49,7 +61,7 @@
 /* Right part */
 .phone_number {
     flex-direction: row;
-    margin-right: 35px;
+    margin-right: 36px;
 }
 
 .phone_number img {

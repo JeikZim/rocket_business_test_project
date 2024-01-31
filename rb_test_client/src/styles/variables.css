@@ -7,4 +7,9 @@ html {
     --nav-bg: #1FA181;
     --footer-bg: #08664F;
     --btn-green: #0DBC91;
+
+    --content-feed-width: 1140px; 
+    --scrollbar-width: 8px;
+
+    --presentation-height: 533px;
 }

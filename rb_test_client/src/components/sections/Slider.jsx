@@ -8,7 +8,7 @@ import { useHttp } from "../../hooks/http.hook";
 import data from "../../data/pages/main/slider.section.json"
 
 import "swiper/css";
-import s from "../../styles/components/Slider.module.css"
+import s from "../../styles/components/sections/Slider.module.css"
 
 function Slider() {
     let { loading, request, error, clearError } = useHttp()
@@ -37,7 +37,7 @@ function Slider() {
                 onSwiper={(swiper) => 0}
             >
                 {
-                    products
+                    products 
                     ?
                     products.map((product, index) => {
                         return (
@@ -47,7 +47,21 @@ function Slider() {
                             )
                     })
                     :
-                    <div className={s.loader}></div>
+                    loading ? <div className={s.loader}></div> :
+                    error ? <div className={s.error}>{error.message}</div> :
+                    <div className={s.error}>Что-то пошло не так :/</div>
+                    
+                    // products
+                    // ?
+                    // products.map((product, index) => {
+                    //     return (
+                    //         <SwiperSlide key={index}>
+                    //             <SlideCard product={product} />
+                    //         </SwiperSlide>
+                    //         )
+                    // })
+                    // :
+                    // <div className={s.loader}></div>
                 }
 
                 <SlideSwithButton direction="prev" />

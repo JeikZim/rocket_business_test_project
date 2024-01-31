@@ -2,7 +2,7 @@
     "title": "Многопрофильная клиника для детей и взрослых",
     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     "img": {
-        "src": "",
-        "alt": ""
+        "src": "/images/img-presentation_1.png",
+        "alt": "Главное изображение для презентации клиники, на котором изображено уютное помещение для детей, с плюшевыми игрушками, рисунками на стенах, и маленькими стульчиками."
     }
 }

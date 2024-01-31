@@ -2,7 +2,7 @@ import React from "react"
 
 import data from "../../data/components/modules/buttons.json"
 
-import styles from "../../styles/components/Modules/BookButton.module.css"
+import styles from "../../styles/components/modules/BookButton.module.css"
 
 function BookButton(props) {
 
