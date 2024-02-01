@@ -1,17 +1,18 @@
-.slider_switch_btn svg path {
-    fill: var(--another-gray);
-}
-
-.slider_switch_btn svg:hover path {
-    fill: var(--btn-green);
-}
-
-.slider_switch_btn button:active svg path {
-    fill: var(--btn-green);
-}
-
-.slider_switch_btn button {
+.slider_switch_btn {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    /* height: 34px; */
+}
+
+.slider_switch_btn svg path,
+.slider_switch_btn.unavailable svg:hover path,
+.slider_switch_btn.unavailable:active svg path {
+    fill: var(--another-gray);
+}
+
+.slider_switch_btn svg:hover path,
+.slider_switch_btn:active svg path {
+    fill: var(--btn-green);
 }

@@ -1,0 +1,45 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: var(--content-feed-width);
+    height: var(--slider-height);
+
+    border-radius: var(--border-radius);
+
+    background-color: var(--gray);
+}
+
+.loader_animation {
+    --loader-size: 64px;
+
+    width: var(--loader-size);
+    height: var(--loader-size);
+
+    border: 5px solid var(--middle-gray);
+    border-bottom-color: var(--another-gray);
+    border-radius: 50%;
+
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

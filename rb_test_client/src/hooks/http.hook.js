@@ -26,7 +26,7 @@ export const useHttp = () => {
                 return JSON.parse(data);
             } catch (err) {
                 setLoading(false);
-                setError(err.message);
+                setError(err);
                 throw err;
             }
         }, []

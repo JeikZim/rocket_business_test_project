@@ -1,0 +1,26 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+
+.error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: var(--content-feed-width);
+    height: var(--slider-height);
+
+    border-radius: var(--border-radius);
+
+    background-color: var(--gray);
+}
+
+.error span {
+    font-size: 32px;
+    font-weight: 700;
+    color: rgb(157, 6, 6);
+}
