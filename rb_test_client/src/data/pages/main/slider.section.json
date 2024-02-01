@@ -1,3 +1,7 @@
 {
-    "title": "Услуги"
+    "title": "Услуги",
+    "fields": {
+        "price_intro": "Всего ",
+        "currency": "₽"
+    }
 }

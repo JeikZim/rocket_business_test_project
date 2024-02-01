@@ -44,3 +44,18 @@ table {
 a {
 	text-decoration: none;
 }
+
+button {
+    border: none;
+    stroke: none;
+
+	padding: 0;
+	margin: 0;
+
+    background-color: transparent;
+}
+
+button::selection {
+    border: none;
+    stroke: none;
+}

@@ -3,16 +3,18 @@
     height: 43px;
     border-radius: 50px;
 
-    color: #FFF;
+    color: var(--btn-green);
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 21px; /* 150% */
 
-    background: var(--btn-green);
+    background: transparent;
+
+    /* box-sizing: ; */
 
     stroke: none;
-    border: none;
+    border: 1px solid var(--btn-green);
 }
 
 .btn:hover {

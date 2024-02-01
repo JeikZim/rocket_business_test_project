@@ -1,0 +1,17 @@
+.slider_switch_btn svg path {
+    fill: var(--another-gray);
+}
+
+.slider_switch_btn svg:hover path {
+    fill: var(--btn-green);
+}
+
+.slider_switch_btn button:active svg path {
+    fill: var(--btn-green);
+}
+
+.slider_switch_btn button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

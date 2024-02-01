@@ -2,13 +2,13 @@ import React from "react"
 
 import data from "../../data/components/modules/buttons.json"
 
-import styles from "../../styles/components/modules/BookButton.module.css"
+import s from "../../styles/components/modules/BookButton.module.css"
 
 function BookButton(props) {
 
     // TODO: Сделать подгрузку текста из JSON
     return (
-        <button className={styles.btn} onClick={openPopUp}>
+        <button className={s.btn} onClick={openPopUp}>
             { props.isShort ? data.bookingBtn.shortText : data.bookingBtn.longText} 
         </button>
     )

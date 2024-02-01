@@ -1,11 +1,174 @@
-.swiper {
-    width: 600px;
-    height: 300px;
+.slider {
+    width: 100%;
+
+    padding-top: 100px;
+    padding-bottom: 92px;
+}
+
+.slider_card {
+    position: relative;
+
+    width: var(--content-feed-width);
+    height: var(--slider-height);
+
+    border-radius: var(--border-radius);
+
+    background-color: var(--gray);
+}
+
+.slider_card img {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.slider_card .skew {
+    position: absolute;
+    left: 0;
+
+}
+
+.slider_card .skew path {
+    fill: var(--gray);
+}
+
+.wrapper {
+    position: relative;
+    z-index: 2;
+
+    padding-top: 53px;
+    padding-bottom: 56px;
+    padding-left: 63px;
+
+    width: calc(var(--content-feed-width) / 2);
+}
+
+.text_content {
+    padding-bottom: 26px;
+}
+
+.slider_card h3 {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.slider_card h3 span {
+    display: block;
+    font-weight: 700;
+    letter-spacing: 0em;
+}
+
+.title {
+    font-size: 38px;
+    line-height: 49px;
+}
+
+.subtitle {
+    font-size: 22px;
+    line-height: 28px;
+    
+    margin-top: 2px;
+}
+
+.service_list li {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+
+    list-style-type: disc;
+    list-style-position: inside;
+
+    margin-bottom: 6px;
+}
+
+.service_list li::marker {
+    color: var(--li-marker-color);
+    font-size: var(--li-marker-size);
+}
+
+.prices {
+    margin-top: 32px;
+}
+
+.prices span {
+
+    letter-spacing: 0em;
+    font-weight: 400;
+}
+
+.new_price {
+    font-size: 20px;
+    line-height: 26px;
+    
+    margin-right: 16px;
+}
+
+.old_price {
+    color: var(--gray-font);
+
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.old_price s {
+    color: var(--gray-font);
+
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.btns button {
+    margin-right: 14px;
 }
 
 .loader {
-    height: 100%;
-    width: 100%;
+    height: 100px;
+    width: 100px;
 
     background: gray;
+}
+
+.error {
+    height: 100px;
+    width: 100px;
+
+    background: red;
+}
+
+.dir_btns_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.dir_btns {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    margin-top: 34px;
+}
+
+.slides_counter {
+    color: var(--middle-gray);
+    
+    margin-right: 36px;
+    margin-left: 36px;
+}
+
+.slides_counter span {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0em;
+}
+
+.slides_counter .left_part {
+    color: var(--dark-font);
+}
+
+.slides_counter .right_part {
+    color: var(--middle-gray);
 }

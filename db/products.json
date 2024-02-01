@@ -37,6 +37,44 @@
                 "alt": "CHECK-UP для женщин фоновая картинка.",
                 "size": null
             }
+        },
+        {
+            "title": "CHECK-UP",
+            "subtitle": "для женщин",
+            "list": [
+                "Услуга 1",
+                "Услуга 2",
+                "Услуга 3",
+                "Услугааааааааа 4"
+            ],
+            "price": {
+                "oldPrice": 4000,
+                "newPrice": 2999
+            },
+            "picture": {
+                "src": "./images/img-slider_2.jpg",
+                "alt": "CHECK-UP для женщин фоновая картинка.",
+                "size": null
+            }
+        },
+        {
+            "title": "CHECK-UP",
+            "subtitle": "для женщин",
+            "list": [
+                "Услуга 1",
+                "Услуга 2",
+                "Услуга 3",
+                "Услугааааааааа 4"
+            ],
+            "price": {
+                "oldPrice": 4000,
+                "newPrice": 2999
+            },
+            "picture": {
+                "src": "./images/img-slider_2.jpg",
+                "alt": "CHECK-UP для женщин фоновая картинка.",
+                "size": null
+            }
         }
     ]
 }
