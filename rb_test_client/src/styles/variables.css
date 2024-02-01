@@ -1,6 +1,6 @@
 html {
     --dark-font: #364844;
-    --light-font: white;
+    --light-font: #fff;
     --gray-font: #868686;
     --middle-gray: #C0C0C0;
     --light-gray: #F8FBFA;
@@ -9,6 +9,7 @@ html {
     --nav-bg: #1FA181;
     --footer-bg: #08664F;
     --btn-green: #0DBC91;
+    --btn-ligth-green: #00D29F;
 
     --content-feed-width: 1140px; 
     --scrollbar-width: 8px;

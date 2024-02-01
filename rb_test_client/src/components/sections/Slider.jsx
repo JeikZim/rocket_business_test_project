@@ -17,9 +17,8 @@ import s from "../../styles/components/sections/Slider.module.css";
 
 function Slider() {
     let { loading, request, error, clearError } = useHttp();
-    
-    let [products, setProducts] = useState(null);
-    let [productsCount, setProdCount] = useState(0)
+
+    let [products, setProducts] = useState([]);
     let [currentProductNumber, setCurProdNum] = useState(0)
     let [isAvailable, setIsAvailable] = useState(false)
 
@@ -35,7 +34,6 @@ function Slider() {
     }, [getProducts]);
 
     useEffect(() => {
-        setProdCount(products?.length ?? 0)
         setCurProdNum(products ? 1 : 0)
         setIsAvailable(loading ? !loading : (error ? !error : true))
     }, [products, error, loading]);
@@ -82,7 +80,7 @@ function Slider() {
                         <span className={s.slides_counter}> 
                             <span className={s.left_part}>{currentProductNumber}</span> 
                             /
-                            <span className={s.right_part}>{productsCount}</span>
+                            <span className={s.right_part}>{products.length}</span>
                         </span>
 
                         <SlideSwithButton isAvailable={isAvailable} isNext={true} />
