@@ -3,5 +3,83 @@
     "fields": {
         "price_intro": "Всего ",
         "currency": "₽"
-    }
+    },
+    "products": [
+        {
+            "title": "CHECK-UP",
+            "subtitle": "для мужчин",
+            "list": [
+                "Гормональный скрининг",
+                "Тестостерон",
+                "Свободный тестестерон",
+                "Глобулин, связывающий половые гормоны"
+            ],
+            "price": {
+                "oldPrice": 3500,
+                "newPrice": 2800
+            },
+            "picture": {
+                "src": "./images/img-slider_1.jpg",
+                "alt": "CHECK-UP для мужчин фоновая картинка.",
+                "size": null
+            }
+        },
+        {
+            "title": "CHECK-UP",
+            "subtitle": "для женщин",
+            "list": [
+                "Услуга 1",
+                "Услуга 2",
+                "Услуга 3",
+                "Услугааааааааа 4"
+            ],
+            "price": {
+                "oldPrice": 4000,
+                "newPrice": 2999
+            },
+            "picture": {
+                "src": "./images/img-slider_2.jpg",
+                "alt": "CHECK-UP для женщин фоновая картинка.",
+                "size": null
+            }
+        },
+        {
+            "title": "CHECK-UP",
+            "subtitle": "для женщин",
+            "list": [
+                "Услуга 1",
+                "Услуга 2",
+                "Услуга 3",
+                "Услугааааааааа 4"
+            ],
+            "price": {
+                "oldPrice": 4000,
+                "newPrice": 2999
+            },
+            "picture": {
+                "src": "./images/img-slider_2.jpg",
+                "alt": "CHECK-UP для женщин фоновая картинка.",
+                "size": null
+            }
+        },
+        {
+            "title": "CHECK-UP",
+            "subtitle": "для женщин",
+            "list": [
+                "Услуга 1",
+                "Услуга 2",
+                "Услуга 3",
+                "Услугааааааааа 4"
+            ],
+            "price": {
+                "oldPrice": 4000,
+                "newPrice": 2999
+            },
+            "picture": {
+                "src": "./images/img-slider_2.jpg",
+                "alt": "CHECK-UP для женщин фоновая картинка.",
+                "size": null
+            }
+        }
+    ]
 }
