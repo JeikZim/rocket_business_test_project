@@ -40,3 +40,10 @@
 .social_media .social_media_icon {
     margin-left: 15px;
 }
+
+
+/* Решает баг с отступом под футером */
+.footer {
+    position: absolute;
+    width: 100%;
+}

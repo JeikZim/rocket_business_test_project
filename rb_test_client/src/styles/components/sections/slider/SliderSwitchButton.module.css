@@ -3,16 +3,16 @@
     align-items: center;
     justify-content: center;
 
-    /* height: 34px; */
+    height: 34px;
 }
 
-.slider_switch_btn svg path,
-.slider_switch_btn.unavailable svg:hover path,
-.slider_switch_btn.unavailable:active svg path {
+.slider_switch_btn svg use,
+.slider_switch_btn.unavailable svg:hover use,
+.slider_switch_btn.unavailable:active svg use {
     fill: var(--another-gray);
 }
 
-.slider_switch_btn svg:hover path,
-.slider_switch_btn:active svg path {
+.slider_switch_btn svg:hover use,
+.slider_switch_btn:active svg use {
     fill: var(--btn-green);
 }

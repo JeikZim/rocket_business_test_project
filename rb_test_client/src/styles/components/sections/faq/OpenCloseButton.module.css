@@ -1,0 +1,36 @@
+.btn {
+    user-select: none;
+    cursor: pointer;
+    position: absolute;
+}
+
+.btn:before,
+.btn:after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    width: 24px;
+    height: 2px;
+
+    background: var(--btn-green);
+
+    transition-duration: 0.175s
+}
+
+.is_closed:before {
+    transform: rotate(0);
+}
+
+.is_closed:after {
+    transform: rotate(90deg);
+}
+
+.is_opened:before {
+    transform: rotate(0);
+}
+
+.is_opened:after {
+    transform: rotate(0);
+}
