@@ -4,6 +4,7 @@ import FAQ from "../components/sections/FAQ";
 import Presentation from "../components/sections/Presentation"
 import Slider from "../components/sections/Slider"
 import Footer from "../components/Footer";
+import PopUp from "../components/PopUp";
 
 import data from "../data/pages/main/main.page.json"
 
@@ -26,6 +27,8 @@ function MainPage() {
             </main>
             
             <Footer />
+
+            <PopUp />
         </>
     );
 }
