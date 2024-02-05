@@ -4,7 +4,7 @@ import BookButton from "./modules/BookingButton";
 import Navbar from "./Navbar";
 import LocationContext from "../context/LocationContext";
 
-import data from '../data/global.json'
+import DATA from '../data/global.json'
 
 import s from "../styles/components/Header.module.css"
 
@@ -21,7 +21,7 @@ function Header() {
                             className={s.location} 
                             // * Временное решение для смены адреса, по-хорошему нужно выпадающее окно с выбором.
                             onClick={() => {
-                                changeLocation(locationNumber < data.locations.length - 1 ? locationNumber + 1 : 0 )
+                                changeLocation(locationNumber < DATA.LOCATIONS.length - 1 ? locationNumber + 1 : 0 )
                             }}
                         > 
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -38,11 +38,11 @@ function Header() {
                     <div className={s.right}>
                         <a 
                             className={s.phone_number}
-                            href={data.links.whatsapp}
+                            href={DATA.LINKS.WHATS_APP}
                             target="_blank"
                         > 
                             <img src="./images/ic-whats_app_1.svg" alt="WhatsApp icon" />
-                            <span>{data.phoneNumber}</span>
+                            <span>{DATA.PHONE_NUMBER}</span>
                         </a>
                         <BookButton isShort={false} /> 
                     </div>

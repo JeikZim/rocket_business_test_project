@@ -59,3 +59,14 @@ button::selection {
     border: none;
     stroke: none;
 }
+
+input {
+	padding: 0;
+	margin: 0;
+}
+
+input, input:focus, button, button:focus {
+	stroke: none;
+	border: none;
+	outline: none;
+}

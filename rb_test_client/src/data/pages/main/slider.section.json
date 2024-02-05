@@ -1,84 +1,84 @@
 {
-    "title": "Услуги",
-    "fields": {
-        "price_intro": "Всего ",
-        "currency": "₽"
+    "TITLE": "Услуги",
+    "FIELDS": {
+        "PRICE_INTRO": "Всего ",
+        "CURRENCY": "₽"
     },
-    "products": [
+    "PRODUCTS": [
         {
-            "title": "CHECK-UP",
-            "subtitle": "для мужчин",
-            "list": [
+            "TITLE": "CHECK-UP",
+            "SUBTITLE": "для мужчин",
+            "LIST": [
                 "Гормональный скрининг",
                 "Тестостерон",
                 "Свободный тестестерон",
                 "Глобулин, связывающий половые гормоны"
             ],
-            "price": {
-                "oldPrice": 3500,
-                "newPrice": 2800
+            "PRICE": {
+                "OLD_PRICE": 3500,
+                "NEW_PRICE": 2800
             },
-            "picture": {
-                "src": "./images/img-slider_1.jpg",
-                "alt": "CHECK-UP для мужчин фоновая картинка.",
-                "size": null
+            "PICTURE": {
+                "SRC": "./images/img-slider_1.jpg",
+                "ALT": "CHECK-UP для мужчин фоновая картинка.",
+                "SIZE": null
             }
         },
         {
-            "title": "CHECK-UP",
-            "subtitle": "для женщин",
-            "list": [
+            "TITLE": "CHECK-UP",
+            "SUBTITLE": "для женщин",
+            "LIST": [
                 "Услуга 1",
                 "Услуга 2",
                 "Услуга 3",
                 "Услугааааааааа 4"
             ],
-            "price": {
-                "oldPrice": 4000,
-                "newPrice": 2999
+            "PRICE": {
+                "OLD_PRICE": 4000,
+                "NEW_PRICE": 2999
             },
-            "picture": {
-                "src": "./images/img-slider_2.jpg",
-                "alt": "CHECK-UP для женщин фоновая картинка.",
-                "size": null
+            "PICTURE": {
+                "SRC": "./images/img-slider_2.jpg",
+                "ALT": "CHECK-UP для женщин фоновая картинка.",
+                "SIZE": null
             }
         },
         {
-            "title": "CHECK-UP",
-            "subtitle": "для женщин",
-            "list": [
+            "TITLE": "CHECK-UP",
+            "SUBTITLE": "для женщин",
+            "LIST": [
                 "Услуга 1",
                 "Услуга 2",
                 "Услуга 3",
                 "Услугааааааааа 4"
             ],
-            "price": {
-                "oldPrice": 4000,
-                "newPrice": 2999
+            "PRICE": {
+                "OLD_PRICE": 4000,
+                "NEW_PRICE": 2999
             },
-            "picture": {
-                "src": "./images/img-slider_2.jpg",
-                "alt": "CHECK-UP для женщин фоновая картинка.",
-                "size": null
+            "PICTURE": {
+                "SRC": "./images/img-slider_2.jpg",
+                "ALT": "CHECK-UP для женщин фоновая картинка.",
+                "SIZE": null
             }
         },
         {
-            "title": "CHECK-UP",
-            "subtitle": "для женщин",
-            "list": [
+            "TITLE": "CHECK-UP",
+            "SUBTITLE": "для женщин",
+            "LIST": [
                 "Услуга 1",
                 "Услуга 2",
                 "Услуга 3",
                 "Услугааааааааа 4"
             ],
-            "price": {
-                "oldPrice": 4000,
-                "newPrice": 2999
+            "PRICE": {
+                "OLD_PRICE": 4000,
+                "NEW_PRICE": 2999
             },
-            "picture": {
-                "src": "./images/img-slider_2.jpg",
-                "alt": "CHECK-UP для женщин фоновая картинка.",
-                "size": null
+            "PICTURE": {
+                "SRC": "./images/img-slider_2.jpg",
+                "ALT": "CHECK-UP для женщин фоновая картинка.",
+                "SIZE": null
             }
         }
     ]

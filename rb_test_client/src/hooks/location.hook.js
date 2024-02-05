@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect } from "react";
 
-const { locations } = require("../data/global.json");
+const { LOCATIONS } = require("../data/global.json");
 
 const useLocation = () => {
     const [locationNumber, setLocationNumber] = useState(0);
@@ -15,13 +15,17 @@ const useLocation = () => {
     const changeLocation = useCallback(
         (num) => {
             setLocationNumber(num);
-            setLocation(locations[num]);
+            setLocation({
+                city: LOCATIONS[num].CITY,
+                street: LOCATIONS[num].STREET,
+                house: LOCATIONS[num].HOUSE,
+            });
 
             localStorage.setItem(
                 storageName,
                 JSON.stringify({
                     locationNumber: num,
-                    location: locations[num],
+                    location: LOCATIONS[num],
                 })
             );
         },
@@ -38,7 +42,7 @@ const useLocation = () => {
                 storageName,
                 JSON.stringify({
                     locationNumber: 0,
-                    location: locations[0],
+                    location: LOCATIONS[0],
                 })
             );
         }

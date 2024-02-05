@@ -1,33 +1,33 @@
 import React from "react";
 
-import styles from "../styles/components/Navbar.module.css";
+import s from "../styles/components/Navbar.module.css";
 
-import data from "../data/components/navbar.json";
+import DATA from "../data/components/navbar.json";
 
 // При добавлении страниц, на которые будет осуществляться переход через навигационную панель
 // В приложении будет необходимо реализовать routes через react-router-dom.
 // Соответственно, здесь вместо <a> будет использоваться <NavLink>
 
-const content = data.navLinks;
+const CONTENT = DATA.NAV_LINKS;
 
 function Navbar() {
     return (
-        <nav className={styles.nav}>
+        <nav className={s.nav}>
             <ul>
                 <li>
-                    <a href={content.aboutUs.link}>{content.aboutUs.name}</a>
+                    <a href={CONTENT.ABOUT_US.NAME}>{CONTENT.ABOUT_US.NAME}</a>
                 </li>
                 <li>
-                    <a href={content.services.link}>{content.services.name}</a>
+                    <a href={CONTENT.SERVICES.NAME}>{CONTENT.SERVICES.NAME}</a>
                 </li>
                 <li>
-                    <a href={content.specialists.link}>{content.specialists.name}</a>
+                    <a href={CONTENT.SPECIALISTS.NAME}>{CONTENT.SPECIALISTS.NAME}</a>
                 </li>
                 <li>
-                    <a href={content.prices.link}>{content.prices.name}</a>
+                    <a href={CONTENT.PRICES.NAME}>{CONTENT.PRICES.NAME}</a>
                 </li>
                 <li>
-                    <a href={content.contacts.link}>{content.contacts.name}</a>
+                    <a href={CONTENT.CONTACTS.NAME}>{CONTENT.CONTACTS.NAME}</a>
                 </li>
             </ul>
         </nav>

@@ -1,24 +1,24 @@
 import React from "react";
 import Question from "./faq/Question"
 
-import data from "../../data/pages/main/faq.section.json";
+import DATA from "../../data/pages/main/faq.section.json";
 
 import s from "../../styles/components/sections/FAQ.module.css";
 
 function FAQ() {
-    const questions = data.questions;
+    const QUESTIONS = DATA.QUESTIONS;
 
     return (
         <section className={s.faq}>
             <div className={s.title_wrapper}>
-                <h2>{data.title}</h2>
+                <h2>{DATA.TITLE}</h2>
             </div>
             <div className={s.content}>
-                {questions.map((question, index) => {
+                {QUESTIONS.map((QUESTION, index) => {
                     return (
                         <Question
-                            title={question.title}
-                            content={question.content}
+                            title={QUESTION.TITLE}
+                            content={QUESTION.CONTENT}
                             key={index}
                         />
                     );

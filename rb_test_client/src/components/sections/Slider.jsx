@@ -5,7 +5,7 @@ import { Navigation, Pagination } from "swiper/modules";
 
 import SlideSwithButton from "./slider/SlideSwitchButton";
 import SlideCard from "./slider/SlideCard";
-import data from "../../data/pages/main/slider.section.json";
+import DATA from "../../data/pages/main/slider.section.json";
 
 import "swiper/css";
 import "../../styles/swiper.css";
@@ -13,12 +13,12 @@ import s from "../../styles/components/sections/Slider.module.css";
 
 function Slider() {
 
-    let products = data.products;
-    let [currentProductNumber, setCurProdNum] = useState(products.length > 0 ? 1 : 0)
+    let PRODUCTS = DATA.PRODUCTS;
+    let [currentProductNumber, setCurProdNum] = useState(PRODUCTS.length > 0 ? 1 : 0)
 
     return (
         <section className={`swiper-section ${s.slider}`}>
-            <h2 className="visually-hidden">{data.title}</h2>
+            <h2 className="visually-hidden">{DATA.TITLE}</h2>
             <Swiper
                 modules={[Navigation, Pagination]}
                 spaceBetween={50}
@@ -30,10 +30,10 @@ function Slider() {
                 allowTouchMove={false}
             >
                 {
-                    products.map((product, index) => {
+                    PRODUCTS.map((PRODUCT, index) => {
                         return (
                             <SwiperSlide key={index}>
-                                <SlideCard product={product} />
+                                <SlideCard product={PRODUCT} />
                             </SwiperSlide>
                         );
                     })
@@ -46,7 +46,7 @@ function Slider() {
                         <span className={s.slides_counter}> 
                             <span className={s.left_part}>{currentProductNumber}</span> 
                             /
-                            <span className={s.right_part}>{products.length}</span>
+                            <span className={s.right_part}>{PRODUCTS.length}</span>
                         </span>
 
                         <SlideSwithButton isAvailable={true} isNext={true} />

@@ -6,7 +6,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=production node app.js",
     "server": "nodemon app.js",
-    "client": "npm run start --prefix rb_test_client", 
+    "client": "npm run start --prefix rb_test_client",
     "client:install": "npm install --prefix rb_test_client",
     "client:build": "npm run build --prefix rb_test_client",
     "dev": "cross-env NODE_ENV=development concurrently \"npm run server\" \"npm run client\""
@@ -15,7 +15,8 @@
   "license": "ISC",
   "dependencies": {
     "config": "^3.3.9",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.9"
   },
   "devDependencies": {
     "concurrently": "^8.0.1",

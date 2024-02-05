@@ -1,7 +1,7 @@
 {
-    "bookingBtn": {
-        "longText": "Записаться на прием",
-        "shortText": "Записаться"
+    "BOOKING_BTN": {
+        "LONG_TEXT": "Записаться на прием",
+        "SHORT_TEXT": "Записаться"
     },
-    "showMoreBtn":  "Подробнее"
+    "SHOW_MORE_BTN":  "Подробнее"
 }

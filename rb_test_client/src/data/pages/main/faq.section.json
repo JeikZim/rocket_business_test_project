@@ -1,16 +1,16 @@
 {
-    "title": "Часто задаваемые вопросы",
-    "questions": [
+    "TITLE": "Часто задаваемые вопросы",
+    "QUESTIONS": [
         {
-            "title": "Заголовок часто задаваемого вопроса",
-            "content": [ "Blandit et et ac non interdum odio tristique diam vestibulum. Velit in quis consequat lacus fringilla amet elementum pharetra massa. Morbi euismod nulla cras adipiscing tristique aliquet purus adipiscing. " ]
+            "TITLE": "Заголовок часто задаваемого вопроса",
+            "CONTENT": [ "Blandit et et ac non interdum odio tristique diam vestibulum. Velit in quis consequat lacus fringilla amet elementum pharetra massa. Morbi euismod nulla cras adipiscing tristique aliquet purus adipiscing. " ]
         },
-        { "title": "Заголовок часто задаваемого вопроса с двумя абзацами", "content": [
+        { "TITLE": "Заголовок часто задаваемого вопроса с двумя абзацами", "CONTENT": [
             "Blandit et et ac non interdum odio tristique diam vestibulum. Velit in quis consequat lacus fringilla amet elementum pharetra massa. Morbi euismod nulla cras adipiscing tristique aliquet purus adipiscing.", 
             "<b> Это предложение должно здесь быть.</b> Massa arcu volutpat blandit augue nibh nisl fames. Sodales pharetra nisi quis purus lacinia. Sapien cras posuere dolor tincidunt quis sed adipiscing. "
         ]},
-        { "title": "Заголовок часто задаваемого вопроса", "content": ["Абзац 1", "Абзац 2"] },
-        { "title": "Заголовок часто задаваемого вопроса", "content": ["Абзац 1", "Абзац 2", "Абзац 3"] },
-        { "title": "Заголовок часто задаваемого вопроса", "content": ["Абзац 1"] }
+        { "TITLE": "Заголовок часто задаваемого вопроса", "CONTENT": ["Абзац 1", "Абзац 2"] },
+        { "TITLE": "Заголовок часто задаваемого вопроса", "CONTENT": ["Абзац 1", "Абзац 2", "Абзац 3"] },
+        { "TITLE": "Заголовок часто задаваемого вопроса", "CONTENT": ["Абзац 1"] }
     ]
 }

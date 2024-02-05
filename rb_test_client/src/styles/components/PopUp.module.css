@@ -27,6 +27,8 @@ body:has(.wrapper:not(.is_closed)) {
 }
 
 .content {
+    display: flex;
+    flex-direction: row;
     height: 350px;
     
     border-radius: var(--border-radius);
@@ -34,7 +36,70 @@ body:has(.wrapper:not(.is_closed)) {
 }
 
 .text, .form {
+    /* display: inline-block; */
     width: 50%;
+
+    box-sizing: border-box;
+}
+
+.text {
+    padding-top: 96px;
+    padding-left: 98px;
+    padding-right: 118px;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 47px;
+    letter-spacing: 0em;
+
+}
+
+.description {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    
+    margin-top: 16px;
+}
+
+.form {
+    padding-top: 60px;
+    padding-left: 20px;
+    padding-right: 98px;
+}
+
+.form form {
+
+}
+
+.form input {
+    height: 41px;
+    width: 100%;
+
+    box-sizing: border-box;
+    padding: 10px 16px 10px;
+    margin-bottom: 16px;
+}
+
+.form input[placeholder] {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+}
+
+.form input, .form input:focus {
+    border: 1px solid var(--another-gray)
+}
+
+.button_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 16px;
 }
 
 .up_part {

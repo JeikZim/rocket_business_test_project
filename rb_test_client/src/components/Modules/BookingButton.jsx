@@ -1,22 +1,16 @@
 import React from "react"
 
-import data from "../../data/components/modules/buttons.json"
+import DATA from "../../data/components/modules/buttons.json"
 
 import s from "../../styles/components/modules/BookButton.module.css"
 
 function BookButton(props) {
 
-    // TODO: Сделать подгрузку текста из JSON
     return (
-        <button className={s.btn} onClick={openPopUp}>
-            { props.isShort ? data.bookingBtn.shortText : data.bookingBtn.longText} 
+        <button type={props.isSubmitedBtn ? "submit" : "button"} className={s.btn} onClick={props?.onClickHandler}>
+            { props.isShort ? DATA.BOOKING_BTN.SHORT_TEXT : DATA.BOOKING_BTN.LONG_TEXT} 
         </button>
     )
-}
-
-function openPopUp() {
-    // Открывает <PopUp />
-    alert("pop up")
 }
 
 export default BookButton

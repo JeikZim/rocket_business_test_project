@@ -1,24 +1,24 @@
 {
-    "navLinks": {
-        "aboutUs": {
-            "name": "О клинике",
-            "link": "#"
+    "NAV_LINKS": {
+        "ABOUT_US": {
+            "NAME": "О клинике",
+            "LINK": "#"
         },
-        "services": {
-            "name": "Услуги",
-            "link": "#"
+        "SERVICES": {
+            "NAME": "Услуги",
+            "LINK": "#"
         },
-        "specialists": {
-            "name": "Специалисты",
-            "link": "#"
+        "SPECIALISTS": {
+            "NAME": "Специалисты",
+            "LINK": "#"
         },
-        "prices": {
-            "name": "Цены",
-            "link": "#"
+        "PRICES": {
+            "NAME": "Цены",
+            "LINK": "#"
         },
-        "contacts": {
-            "name": "Контакты",
-            "link": "#"
+        "CONTACTS": {
+            "NAME": "Контакты",
+            "LINK": "#"
         }
     }
 }

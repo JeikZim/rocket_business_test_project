@@ -6,12 +6,12 @@ import Slider from "../components/sections/Slider"
 import Footer from "../components/Footer";
 import PopUp from "../components/PopUp";
 
-import data from "../data/pages/main/main.page.json"
+import DATA from "../data/pages/main/main.page.json"
 
 function MainPage() {
     useEffect(() => {
-        document.title = "Главная страница";
-        document.querySelector('meta[name="description"]').content = "Главная страница";
+        document.title = DATA.HEAD.TITLE;
+        document.querySelector('meta[name="description"]').content = DATA.HEAD.DESCRIPTION;
     }, []);
 
     return (
@@ -20,7 +20,7 @@ function MainPage() {
 
             <main>
                 {/* Скрытый заголовок h1 для семантики */}
-                <h1 className="visually-hidden">{data.body.h1}</h1>
+                <h1 className="visually-hidden">{DATA.BODY.H1}</h1>
                 <Presentation />
                 <FAQ />
                 <Slider />

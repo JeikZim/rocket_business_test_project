@@ -9,7 +9,7 @@ import SlideCard from "./slider/SlideCard";
 import SlideCardLoader from "./slider/SlideCardLoader";
 import SlideCardError from "./slider/SlideCardError";
 
-import data from "../../data/pages/main/slider.section.json";
+import DATA from "../../data/pages/main/slider.section.json";
 
 import "swiper/css";
 import "../../styles/swiper.css";
@@ -41,7 +41,7 @@ function Slider() {
 
     return (
         <section className={`swiper-section ${s.slider}`}>
-            <h2 className="visually-hidden">{data.title}</h2>
+            <h2 className="visually-hidden">{DATA.TITLE}</h2>
             <Swiper
                 modules={[Navigation, Pagination]}
                 spaceBetween={50}
