@@ -1,17 +1,20 @@
 import React, { useEffect } from "react";
 import Header from "../components/Header";
 import FAQ from "../components/sections/FAQ";
-import Presentation from "../components/sections/Presentation"
-import Slider from "../components/sections/Slider"
+import Presentation from "../components/sections/Presentation";
+import Slider from "../components/sections/Slider";
 import Footer from "../components/Footer";
 import PopUp from "../components/PopUp";
+import Menu from "../components/Menu";
 
-import DATA from "../data/pages/main/main.page.json"
+import DATA from "../data/pages/main/main.page.json";
 
 function MainPage() {
+    
     useEffect(() => {
         document.title = DATA.HEAD.TITLE;
-        document.querySelector('meta[name="description"]').content = DATA.HEAD.DESCRIPTION;
+        document.querySelector('meta[name="description"]').content =
+            DATA.HEAD.DESCRIPTION;
     }, []);
 
     return (
@@ -25,10 +28,12 @@ function MainPage() {
                 <FAQ />
                 <Slider />
             </main>
-            
+
             <Footer />
 
             <PopUp />
+
+            <Menu />
         </>
     );
 }

@@ -23,3 +23,11 @@ header .nav, .nav ul {
    color: var(--light-font);
    line-height: 24px;
 }
+
+@media screen and (max-width: 1140px) and (orientation: portrait) { 
+    .nav ul { flex-direction: column }
+
+    .nav li { margin-bottom: 10px }
+    
+    .nav li:last-child { margin-bottom: 0 }
+}

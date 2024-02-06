@@ -1,21 +1,34 @@
-.wrapper { 
-    width: var(--content-feed-width) 
+.wrapper {
+    width: var(--content-feed-width)
 }
 
-.up .wrapper, .up, .bottom, .left, .right, .phone_number, .phone_number span, .location, .location div {
+.up .wrapper,
+.up,
+.bottom,
+.left,
+.right,
+.phone_number,
+.phone_number span,
+.location,
+.location div {
     display: flex;
 }
 
-.up .wrapper { justify-content: space-between; }
+.up .wrapper {
+    justify-content: space-between;
+}
 
 .up {
     justify-content: center;
 
-    height: 67px;
+    height: var(--header-height-desktop);
     width: 100%;
 }
 
-.left, .right { align-items: center; }
+.left,
+.right {
+    align-items: center;
+}
 
 /* Left part */
 .logo {
@@ -36,7 +49,10 @@
     font-weight: 400;
 }
 
-.location svg { margin-right: 1px; margin-left: 1px; } 
+.location svg {
+    margin-right: 1px;
+    margin-left: 1px;
+}
 
 .location div {
     margin-left: 2.25px;
@@ -53,8 +69,8 @@
     margin-bottom: -2px;
 }
 
-.location .subtitle { 
-    color: var(--gray-font); 
+.location .subtitle {
+    color: var(--gray-font);
     line-height: calc(var(--span-line-height) - 4px);
 }
 
@@ -78,6 +94,87 @@
 
     height: 43px;
     width: 100%;
-    
+
     background-color: var(--nav-bg);
+}
+
+.left svg {
+    display: none;
+}
+
+@media screen and (max-width: 1140px) and (orientation: portrait) { 
+    .location svg, .location .subtitle, .phone_number img, .bottom, .btn_wrapper {
+        display: none;
+    }
+
+    .wrapper { 
+        position: relative;
+        height: var(--header-height-mobile);
+
+        z-index: 15;
+    }
+
+    .logo {
+        position: absolute;
+        top: 24px;
+        left: 97px;
+
+        margin: 0;
+        padding: 0;
+
+        width: 62px;
+        height: 18.32px;
+    }
+
+    .phone_number span, .location .title {
+        position: absolute;
+        right: 19px;
+        
+        letter-spacing: 0em;
+        text-align: right;
+    }
+
+    .phone_number span {
+        top: 14px;
+
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+
+    .location .title {
+        top: 35px;
+
+        margin: 0;
+        padding: 0;
+
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 17px;
+    }
+
+    /* Анимация BurgerButton */
+    
+    .burger_wrapper {
+        width: 71px;
+        height: 100%;
+    }
+
+    .burger_wrapper svg {
+        position: absolute;
+        top: 20px;
+        left: 17px;
+
+        display: block;
+        
+        overflow: visible;
+    }
+
+    .burger_wrapper.is_cross svg {
+        top: 19.5px;
+        left: 19px;
+    }
+
+    .burger_wrapper rect { transition: transform 0.15s }
 }

@@ -14,6 +14,15 @@ function Question(props) {
             onClick={isOpened ? () => {} : onClickHandler} 
             className={`${s.question} ${ isOpened ? "" : s.pointer_active }`}
         >
+            <div className={s.corner}>
+                <div 
+                    onClick={onClickHandler} 
+                    className={s.open_close_btn}
+                >
+                    <OpenCloseButton isOpened={isOpened} />
+                </div>
+            </div>
+            
             <h3 onClick={ isOpened ? onClickHandler : () => {} }>
                 {props.title}
             </h3>
@@ -22,15 +31,6 @@ function Question(props) {
                 {props.content.map((paragraph, index) => {
                     return <p key={index}>{paragraph}</p>;
                 })}
-            </div>
-
-            <div className={s.corner}>
-                <div 
-                    onClick={onClickHandler} 
-                    className={s.open_close_btn}
-                >
-                    <OpenCloseButton isOpened={isOpened} />
-                </div>
             </div>
         </article>
     );
