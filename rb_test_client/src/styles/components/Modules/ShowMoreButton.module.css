@@ -10,6 +10,9 @@
     line-height: 21px; /* 150% */
 
     background-color: transparent;
+}
+
+.btn, .btn:focus {
 
     stroke: none;
     border: 1px solid var(--btn-green);
