@@ -1,43 +1,69 @@
-import React, { useState } from "react";
-import BookingButton from "./modules/BookingButton"
+import React, { useCallback, useState } from "react";
+import { HandySvg } from "handy-svg";
+import BookingButton from "./modules/BookingButton";
 import { useHttp } from "../hooks/http.hook";
 
-import DATA from "../data/components/pop_up.json"
+import crossButtonSrc from "../assets/ui-button_cross.svg"
 
-import s from "../styles/components/PopUp.module.css"
+import DATA from "../data/components/pop_up.json";
+
+import s from "../styles/components/PopUp.module.css";
 
 function PopUp() {
     let { loading, request, error, clearError } = useHttp();
 
-    const [isClosed, toggleClosed] = useState(false);
     const [form, setForm] = useState({
-        fullname: '',
-        phoneNumber: '',
-        email: '',
-    })
+        fullname: "",
+        phoneNumber: "",
+        email: "",
+    });
 
     const onChangeHandler = (e) => {
         setForm({
             ...form,
-            [e.target.name]: e.target.value
-        })
+            [e.target.name]: e.target.value,
+        });
+    };
+
+    const closePopUp = () => {
+        document.getElementsByClassName(s.wrapper)[0]?.classList.add(s.is_closed)
     }
 
-    const onClickHandler = async () => {
-        try {
-            const response = await request("/api/sendMail", "POST", form);
-            if (!response.ok) {
-                console.error(response);
+    const sendData = useCallback(
+        async () => {
+            try {
+                if (!form.fullname || !form.email || !form.phoneNumber) {
+                    console.error("Заполните поля");
+                }
+
+                // Остальная валидация
+
+                const response = await request("api/sendMail", "POST", form);
+    
+                if (!response.ok) {
+                    throw new Error("Ошибка");
+                }
+
+                setForm({
+                    fullname: "",
+                    phoneNumber: "",
+                    email: "",
+                });
+            } catch (err) {
+                console.error(err.message);
             }
-        } catch (err) {}
-    }
+        }, [form, setForm]
+    );
 
     return (
-        <div className={`${s.wrapper} ${ isClosed ? s.is_closed : "" }`}>
+        <div className={`${s.wrapper} ${s.is_closed}`}>
             <div className={s.pop_up}>
                 <div className={s.up_part}>
-                    <div onClick={() => toggleClosed(prevState => !prevState)} className={s.cross_wrapper}>
-                        <div className={s.cross}></div>
+                    <div
+                        onClick={closePopUp}
+                        className={s.cross_wrapper}
+                    >
+                        <CrossButton />
                     </div>
                 </div>
                 <div className={s.content}>
@@ -46,15 +72,35 @@ function PopUp() {
                         <div className={s.description}>{DATA.CONTENT}</div>
                     </div>
                     <div className={s.form}>
-                        <form onChange={onChangeHandler}>
-                            <input required name="fullname" type="text" placeholder={DATA.FORM.FULLNAME_PLACEHOLDER} />
-                            <input required name="phoneNumber" type="tel" placeholder={DATA.FORM.PHONE_NUMBER_PLACEHOLDER} />
-                            <input required name="email" type="email" placeholder={DATA.FORM.EMAIL_PLACEHOLDER} />
-                            <div className={s.button_wrapper}>   
-                                <BookingButton 
-                                    isSubmitedBtn={true}
+                        <form>
+                            <input
+                                required
+                                name="fullname"
+                                type="text"
+                                placeholder={DATA.FORM.FULLNAME_PLACEHOLDER}
+                                value={form.fullname}
+                                onChange={onChangeHandler}
+                            />
+                            <input
+                                required
+                                name="phoneNumber"
+                                type="tel"
+                                placeholder={DATA.FORM.PHONE_NUMBER_PLACEHOLDER}
+                                value={form.phoneNumber}
+                                onChange={onChangeHandler}
+                            />
+                            <input
+                                required
+                                name="email"
+                                type="email"
+                                placeholder={DATA.FORM.EMAIL_PLACEHOLDER}
+                                value={form.email}
+                                onChange={onChangeHandler}
+                            />
+                            <div className={s.button_wrapper}>
+                                <BookingButton
                                     isShort={true}
-                                    onClickHandler={onClickHandler} 
+                                    onClickHandler={sendData}
                                 />
                             </div>
                         </form>
@@ -62,6 +108,16 @@ function PopUp() {
                 </div>
             </div>
         </div>
+    );
+}
+
+function CrossButton() {
+    return (
+        <HandySvg 
+            src={crossButtonSrc}
+            height="20"
+            width="20"
+        />
     )
 }
 

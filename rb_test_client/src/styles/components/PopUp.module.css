@@ -24,6 +24,7 @@ body:has(.wrapper:not(.is_closed)) {
 
 .pop_up {
     width: var(--content-feed-width);
+    z-index: 11;
 }
 
 .content {
@@ -36,9 +37,7 @@ body:has(.wrapper:not(.is_closed)) {
 }
 
 .text, .form {
-    /* display: inline-block; */
     width: 50%;
-
     box-sizing: border-box;
 }
 
@@ -69,11 +68,7 @@ body:has(.wrapper:not(.is_closed)) {
     padding-top: 60px;
     padding-left: 20px;
     padding-right: 98px;
-}
-
-.form form {
-
-}
+} 
 
 .form input {
     height: 41px;
@@ -109,34 +104,14 @@ body:has(.wrapper:not(.is_closed)) {
 }
 
 .cross_wrapper {
+    cursor: pointer;
+
     position: absolute;
     top: 0;
     right: 0;
 
     height: 20px;
     width: 20px;
-}
 
-.cross {
-    cursor: pointer;
-    position: absolute;
-    /* top: 14.14px;
-    right: 10px; */
-}
-
-.cross:before,
-.cross:after {
-    content: "";
-    position: absolute;
-    width: 28.28px;
-    height: 2px;
-    background: var(--light-gray);
-}
-
-.cross:before {
-    transform: rotate(45deg);
-}
-
-.cross:after {
-    transform: rotate(-45deg);
+    margin-right: 2px;
 }

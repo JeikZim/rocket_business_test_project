@@ -7,8 +7,9 @@ const url = config.get('baseUrl') + PORT;
 
 const app = express();
 
-// app.use(express.json({ extended: true }))
+app.use(express.json({ extended: true }))
 app.use('/api/products', require('./routes/products.routes'))
+app.use('/api/sendMail', require('./routes/sendMail.routes'))
 
 if (process.env.NODE_ENV === 'production') {
     app.use('/', express.static(path.join(__dirname, 'rb_test_client', 'build')))
