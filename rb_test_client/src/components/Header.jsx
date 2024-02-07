@@ -11,6 +11,10 @@ import DATA from '../data/global.json'
 
 import s from "../styles/components/Header.module.css"
 import menuStyles from "../styles/components/Menu.module.css"
+import PopUpStyles from "../styles/components/PopUp.module.css"
+
+import { closePopUp } from "./PopUp";
+import { openCloseMenu } from "./Menu";
 
 function Header() {
     const { location, locationNumber, changeLocation } = useContext(LocationContext)
@@ -18,16 +22,9 @@ function Header() {
 
     const openCloseMenuHandler = useCallback(
         () => {
-            if (menuIsOpen) {
-                document
-                    .getElementsByClassName(menuStyles.wrapper)[0]
-                    ?.classList.add(menuStyles.is_closed);
-            } 
-            else {
-                document
-                    .getElementsByClassName(menuStyles.wrapper)[0]
-                    ?.classList.remove(menuStyles.is_closed);
-            }
+            closePopUp()
+            
+            openCloseMenu(menuIsOpen)
 
             setMenuOpeness(!menuIsOpen)
         }, [menuIsOpen, setMenuOpeness]

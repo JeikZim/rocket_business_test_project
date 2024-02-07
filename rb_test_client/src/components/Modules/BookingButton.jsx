@@ -1,22 +1,22 @@
 import React from "react";
-import PopUp from "../PopUp";
+import PopUp, { openPopUp } from "../PopUp";
 
 import DATA from "../../data/components/modules/buttons.json";
 
 import s from "../../styles/components/modules/BookingButton.module.css";
-import popUpStyles from "../../styles/components/PopUp.module.css";
+import { openCloseMenu } from "../Menu";
 
 function BookButton(props) {
     const onClickHandler = () => {
-        document
-            .getElementsByClassName(popUpStyles.wrapper)[0]
-            ?.classList.remove(popUpStyles.is_closed);
+        openCloseMenu(true);
+
+        openPopUp();
     };
 
     return (
         <button
             type={props.isSubmitedBtn ? "submit" : "button"}
-            className={s.btn}
+            className={`${s.btn} ${props.isWhite ? s.white_btn : s.green_btn}`}
             onClick={props?.onClickHandler ?? onClickHandler}
         >
             {props.isShort

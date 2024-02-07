@@ -15,12 +15,16 @@ html {
     --btn-white: #F6F6F6;
     --pop-up-wrapper-bg: #45927FE5;
     --pop-up-bg: #F8FBFA;
+    --cross-green: #569B89;
 
     --content-feed-width: 1140px; 
     --scrollbar-width: 8px;
 
     --header-height-mobile: 65px;
     --header-height-desktop: 67px;
+    --pop-up-width-mobile: 340px;
+    --pop-up-height-mobile: 433px;
+    --pop-up-height-desktop: 350px;
 
     --presentation-height: 533px;
     --slider-height: 440px;

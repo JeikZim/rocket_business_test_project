@@ -4,6 +4,19 @@ import Navbar from "./Navbar";
 
 import s from "../styles/components/Menu.module.css";
 
+export const openCloseMenu = (menuIsOpen) => {
+    if (menuIsOpen) {
+        document
+            .getElementsByClassName(s.wrapper)[0]
+            ?.classList.add(s.is_closed);
+    } 
+    else {
+        document
+            .getElementsByClassName(s.wrapper)[0]
+            ?.classList.remove(s.is_closed);
+    }
+}
+
 function Menu() {
 
     return (
@@ -12,7 +25,7 @@ function Menu() {
                 <Navbar />
             </div>
             <div className={s.btn_wrapper}>   
-                <BookingButton />
+                <BookingButton isWhite={true} />
             </div>
         </div>
     );

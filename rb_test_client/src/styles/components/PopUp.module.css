@@ -5,7 +5,7 @@
 
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     z-index: 10;
 
     height: 100vh;
@@ -30,7 +30,7 @@ body:has(.wrapper:not(.is_closed)) {
 .content {
     display: flex;
     flex-direction: row;
-    height: 350px;
+    height: var(--pop-up-height-desktop);
     
     border-radius: var(--border-radius);
     background-color: var(--pop-up-bg);
@@ -84,6 +84,8 @@ body:has(.wrapper:not(.is_closed)) {
     font-weight: 400;
     line-height: 21px;
     letter-spacing: 0em;
+    
+    color: var(--gray-font);
 }
 
 .form input, .form input:focus {
@@ -114,4 +116,109 @@ body:has(.wrapper:not(.is_closed)) {
     width: 20px;
 
     margin-right: 2px;
+}
+
+@media screen and (max-width: 1140px) and (orientation: portrait) {
+
+    .form input:last-of-type, .cross_wrapper { margin: 0 }
+    .form, .text { padding: 0 } 
+    .up_part { height: 0 }
+
+    .wrapper {
+        position: fixed;
+        top: var(--header-height-mobile);
+        left: 0;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .is_closed {
+        display: none;
+    }
+
+    body:has(.wrapper:not(.is_closed)),
+    body:has(.wrapper:not(.is_closed)) main {
+        overflow: hidden;
+    }
+    
+    .pop_up {
+        margin-top: 75px;
+        width: var(--pop-up-width-mobile);
+    }
+    
+    .content {
+        display: flex;
+        flex-direction: column;
+        height: var(--pop-up-height-mobile);
+
+        box-sizing: border-box;
+        padding: 22px;
+        padding-left: 23px;
+    }
+    
+    .text, .form {
+        width: 100%;
+        height: fit-content;
+        box-sizing: border-box;
+    }
+    
+    .text {
+        padding-right: 28px;
+    }
+    
+    .title {
+        font-size: 26px;
+        line-height: 34px;
+    }
+    
+    .description {
+        font-size: 14px;
+        line-height: 21px;
+        
+        margin-top: 12px;
+
+        box-sizing: border-box;
+        padding-right: 55px; /* 28px + 27px */
+    }
+    
+    .form {
+        margin-top: 40px;
+    } 
+    
+    .form input {
+        height: 41px;
+        width: 100%;
+    
+        box-sizing: border-box;
+        padding: 12px;
+        margin-bottom: 8px;
+    }
+    
+    .form input[placeholder] {
+        font-size: 13px;
+        line-height: 17px;
+        color: --gray-font;
+    }
+
+    .button_wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 24px;
+    }
+
+    .button_wrapper button {
+        height: 43px;
+        width: 137px;
+    }
+    
+    .cross_wrapper {
+        top: 22px;
+        right: 22px;
+    }
+    
+    .cross_wrapper path { stroke: var(--cross-green) /* #F8FBFA */ }
 }

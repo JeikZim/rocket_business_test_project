@@ -1,13 +1,22 @@
 import React, { useCallback, useState } from "react";
-import { HandySvg } from "handy-svg";
 import BookingButton from "./modules/BookingButton";
 import { useHttp } from "../hooks/http.hook";
-
-import crossButtonSrc from "../assets/ui-button_cross.svg"
 
 import DATA from "../data/components/pop_up.json";
 
 import s from "../styles/components/PopUp.module.css";
+
+export const openPopUp = () => {
+    document
+            .getElementsByClassName(s.wrapper)[0]
+            ?.classList.remove(s.is_closed);
+}
+
+export const closePopUp = () => {
+    document
+        .getElementsByClassName(s.wrapper)[0]
+        ?.classList.add(s.is_closed);
+};
 
 function PopUp() {
     let { loading, request, error, clearError } = useHttp();
@@ -25,44 +34,35 @@ function PopUp() {
         });
     };
 
-    const closePopUp = () => {
-        document.getElementsByClassName(s.wrapper)[0]?.classList.add(s.is_closed)
-    }
-
-    const sendData = useCallback(
-        async () => {
-            try {
-                if (!form.fullname || !form.email || !form.phoneNumber) {
-                    console.error("Заполните поля");
-                }
-
-                // Остальная валидация
-
-                const response = await request("api/sendMail", "POST", form);
-    
-                if (!response.ok) {
-                    throw new Error("Ошибка");
-                }
-
-                setForm({
-                    fullname: "",
-                    phoneNumber: "",
-                    email: "",
-                });
-            } catch (err) {
-                console.error(err.message);
+    const sendData = useCallback(async () => {
+        try {
+            if (!form.fullname || !form.email || !form.phoneNumber) {
+                console.error("Заполните поля");
             }
-        }, [form, setForm]
-    );
+
+            // Остальная валидация
+
+            const response = await request("api/sendMail", "POST", form);
+
+            if (!response.ok) {
+                throw new Error("Ошибка");
+            }
+
+            setForm({
+                fullname: "",
+                phoneNumber: "",
+                email: "",
+            });
+        } catch (err) {
+            console.error(err.message);
+        }
+    }, [form, setForm]);
 
     return (
         <div className={`${s.wrapper} ${s.is_closed}`}>
             <div className={s.pop_up}>
                 <div className={s.up_part}>
-                    <div
-                        onClick={closePopUp}
-                        className={s.cross_wrapper}
-                    >
+                    <div onClick={closePopUp} className={s.cross_wrapper}>
                         <CrossButton />
                     </div>
                 </div>
@@ -113,11 +113,10 @@ function PopUp() {
 
 function CrossButton() {
     return (
-        <HandySvg 
-            src={crossButtonSrc}
-            height="20"
-            width="20"
-        />
+        <svg width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L21.0001 21.0001" stroke="#F8FBFA" strokeWidth="2" strokeLinejoin="round"/>
+            <path d="M1 21.0001L21.0001 0.999921" stroke="#F8FBFA" strokeWidth="2" strokeLinejoin="round"/>
+        </svg>
     )
 }
 
