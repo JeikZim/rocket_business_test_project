@@ -1,8 +1,8 @@
 .slider {
     width: 100%;
 
-    padding-top: 100px;
-    padding-bottom: 92px;
+    margin-top: 100px;
+    margin-bottom: 92px;
 }
 
 .loader {
@@ -58,4 +58,15 @@
 
 .slides_counter .right_part {
     color: var(--middle-gray);
+}
+
+@media screen and (max-width: 1140px) and (orientation: portrait) {
+    .slider {
+        margin-top: 35px;
+        margin-bottom: 35px;
+    }
+    
+    .dir_btns {
+        margin-top: 27px;
+    }
 }

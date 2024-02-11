@@ -1,4 +1,5 @@
 .presentation {
+
     position: relative;
 
     display: flex;
@@ -8,48 +9,6 @@
 
     height: var(--presentation-height);
     width: 100%;
-}
-
-.wrapper {
-    position: relative;
-    z-index: 1;
-
-    width: var(--content-feed-width);
-}
-
-.left_half {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    
-    margin-top: 144px;
-
-    height: 100%;
-    width: calc(var(--content-feed-width) / 2);
-}
-
-.left_half h2 {
-    display: flex;
-
-    width: 360px;
-
-    margin-bottom: 14px;
-
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-
-.left_half p {
-    display: flex;
-
-    width: 367px;
-
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%; /* 24px */
 }
 
 .image_wrapper {
@@ -63,4 +22,102 @@
     width: calc(100vw / 2 - var(--scrollbar-width));
     height:  var(--presentation-height);
     object-fit: cover;
+}
+
+.wrapper {
+    position: relative;
+    z-index: 1;
+
+    width: var(--content-feed-width);
+}
+
+.content {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    
+    margin-top: 144px;
+
+    height: 100%;
+    width: calc(var(--content-feed-width) / 2);
+}
+
+.content h2 {
+    display: flex;
+
+    width: var(--text-content-title-width-desktop);
+
+    margin-bottom: 14px;
+
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.content p {
+    display: flex;
+
+    width: var(--text-content-description-width-desktop);
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+}
+
+@media screen and (max-width: 1140px) and (orientation: portrait) {
+    .presentation {
+        position: relative;
+    
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    
+        height: fit-content;
+        width: 100%;
+
+        padding-bottom: 53px;
+    }
+    
+    .image_wrapper {
+        position: relative;
+        height: var(--presentation-image-height);
+    }
+    
+    .image_wrapper img {
+        width: 100%;
+        object-fit: cover;
+        height: var(--presentation-image-height);
+    }
+    
+    .wrapper {
+        z-index: 0;
+    
+        width: 100%
+    }
+    
+    .content {
+        align-items: center;
+        margin-top: 35px;
+    
+        width: 100%;
+    }
+
+    .content h2, .content p {
+        width: var(--text-content-width-mobile);
+    }
+    
+    .content h2 {
+        margin-bottom: 9px;
+    
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 34px;
+    }
+    
+    .content p {
+        font-size: 14px;
+        line-height: 21px;
+    }
 }

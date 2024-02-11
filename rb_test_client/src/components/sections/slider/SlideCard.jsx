@@ -41,7 +41,7 @@ function SlideCard(props) {
                 </div>
 
                 <div className={s.btns}>
-                    <BookingButton isShort={true}/>
+                    <BookingButton isShort={true} inMenu={false}/>
                     <ShowMoreButton />
                 </div>
             </div>

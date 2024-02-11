@@ -1,9 +1,12 @@
 .faq {
+    --padding-top-desktop: 100px;
+    --padding-top-mobile: 35px;
+
     width: 100%;
 }
 
 .title_wrapper {
-    padding-top: 100px;
+    padding-top: var(--padding-top-desktop);
 }
 
 .title_wrapper h2 {
@@ -18,10 +21,41 @@
 .content {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
 
     width: 100%;
 
-    padding-top: 16px;
+    margin-top: 40px;
+}
+
+@media screen and (max-width: 1140px) and (orientation: portrait) { 
+    .faq {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title_wrapper { 
+        padding-top: var(--padding-top-mobile);
+        width: var(--text-content-width-mobile);
+    }
+    
+    .title_wrapper h2 {
+        font-size: 26px;
+        line-height: 34px;
+    
+        text-align: left;
+
+    }
+    
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        width: var(--text-content-width-mobile);
+    
+        padding-top: 31px;
+    }
+    
 }

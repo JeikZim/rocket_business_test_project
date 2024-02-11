@@ -14,15 +14,15 @@
     display: flex;
 }
 
-.up .wrapper {
-    justify-content: space-between;
-}
-
 .up {
     justify-content: center;
+    background-color: var(--header-bg-desktop);
+}
+
+.up .wrapper {
+    justify-content: space-between;
 
     height: var(--header-height-desktop);
-    width: 100%;
 }
 
 .left,
@@ -114,6 +114,11 @@
         z-index: 15;
     }
 
+    .up, .up .wrapper {
+        
+        background-color: var(--header-bg-mobile);
+    }
+
     .logo {
         position: absolute;
         top: 24px;
@@ -142,6 +147,11 @@
         line-height: 21px;
     }
 
+    .location_wrapper {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
 
     .location .title {
         top: 35px;
@@ -152,6 +162,9 @@
         font-size: 13px;
         font-weight: 400;
         line-height: 17px;
+
+        display: block;
+        width: 150px;
     }
 
     /* Анимация BurgerButton */
@@ -160,21 +173,30 @@
         width: 71px;
         height: 100%;
     }
+    
+    .burger_wrapper .burger {
+        overflow: visible;
 
-    .burger_wrapper svg {
         position: absolute;
         top: 20px;
         left: 17px;
 
         display: block;
-        
-        overflow: visible;
+        height: 26px;
+        width: 37px;
+
+        background-image: url("../../assets/ui-button_burger.svg");
     }
 
-    .burger_wrapper.is_cross svg {
+    .burger_wrapper.is_cross .burger {
         top: 19.5px;
-        left: 19px;
+        left: 19px; 
+
+        height: 30px;
+        width: 29px;
+        
+        background-image: url("../../assets/ui-button_burger_cross.svg");
     }
 
-    .burger_wrapper rect { transition: transform 0.15s }
+    .burger_wrapper .burger { transition: all 0.15s, width 0s, height 0s  }
 }

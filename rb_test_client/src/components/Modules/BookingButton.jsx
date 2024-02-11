@@ -1,22 +1,27 @@
-import React from "react";
+import React, { useCallback } from "react";
 import PopUp, { openPopUp } from "../PopUp";
 
 import DATA from "../../data/components/modules/buttons.json";
 
 import s from "../../styles/components/modules/BookingButton.module.css";
 import { openCloseMenu } from "../Menu";
+import { toggleBurgerButton } from "../Header";
 
 function BookButton(props) {
-    const onClickHandler = () => {
-        openCloseMenu(true);
+    const onClickHandler = useCallback(() => {
+        
+        if (props.inMenu) {
+            toggleBurgerButton()
+            openCloseMenu(true);
+        }
 
         openPopUp();
-    };
+    }, []);
 
     return (
         <button
             type={props.isSubmitedBtn ? "submit" : "button"}
-            className={`${s.btn} ${props.isWhite ? s.white_btn : s.green_btn}`}
+            className={`${s.btn} ${props.inMenu ? s.white_btn : s.green_btn}`}
             onClick={props?.onClickHandler ?? onClickHandler}
         >
             {props.isShort

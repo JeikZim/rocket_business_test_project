@@ -20,6 +20,16 @@ html {
     --content-feed-width: 1140px; 
     --scrollbar-width: 8px;
 
+    --text-content-title-width-desktop: 360px;
+    --text-content-description-width-desktop: 367px;
+    --text-content-width-mobile: 340px;
+
+    --slider-img-height-mobile: 169px;
+    --slider-text-content-height-mobile: 367px;
+
+    --presentation-image-height: 288px;
+    --header-bg-desktop: #FFFFFF;
+    --header-bg-mobile: #F6F6F6;
     --header-height-mobile: 65px;
     --header-height-desktop: 67px;
     --pop-up-width-mobile: 340px;
@@ -27,7 +37,8 @@ html {
     --pop-up-height-desktop: 350px;
 
     --presentation-height: 533px;
-    --slider-height: 440px;
+    --slider-height-desktop: 440px;
+    --slider-height-mobile: 536px;
 
     --border-radius: 5px;
 

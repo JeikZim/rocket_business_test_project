@@ -2,7 +2,7 @@
     position: relative;
 
     width: var(--content-feed-width);
-    height: var(--slider-height);
+    height: var(--slider-height-desktop);
 
     border-radius: var(--border-radius);
 
@@ -38,12 +38,12 @@
 }
 
 .text_content {
-    padding-bottom: 26px;
+    margin-bottom: 26px;
 }
 
 .slider_card h3 {
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
 }
 
 .slider_card h3 span {
@@ -60,8 +60,6 @@
 .subtitle {
     font-size: 22px;
     line-height: 28px;
-
-    margin-top: 2px;
 }
 
 .service_list li {
@@ -72,8 +70,10 @@
 
     list-style-type: disc;
     list-style-position: inside;
+}
 
-    margin-bottom: 6px;
+.service_list li:not(:last-of-type) {
+    margin-bottom: 5px;
 }
 
 .service_list li::marker {
@@ -82,7 +82,7 @@
 }
 
 .prices {
-    margin-top: 32px;
+    margin-top: 33px;
 }
 
 .prices span {
@@ -98,14 +98,7 @@
     margin-right: 16px;
 }
 
-.old_price {
-    color: var(--gray-font);
-
-    font-size: 16px;
-    line-height: 24px;
-}
-
-.old_price s {
+.old_price, .old_price s  {
     color: var(--gray-font);
 
     font-size: 16px;
@@ -114,4 +107,102 @@
 
 .btns button {
     margin-right: 14px;
+}
+
+@media screen and (max-width: 1140px) and (orientation: portrait) {
+    .slider_card {
+        display: flex;
+        flex-direction: column;
+
+        width: var(--text-content-width-mobile);
+        height: var(--slider-height-mobile);
+    }
+    
+    .slider_card img {
+        position: relative;
+        top: 0;
+        right: auto;
+
+        height: var(--slider-img-height-mobile);
+        width: 100%;
+
+        border-radius: var(--border-radius) var(--border-radius) 0 0;
+    }
+    
+    .slider_card .skew {
+        display: none;
+    }
+    
+    .wrapper {
+    
+        padding-top: 22px;
+        padding-bottom: 42px;
+        padding-left: 23px;
+        padding-right: 30px;
+
+        box-sizing: border-box;
+    
+        height: var(--slider-text-content-height-mobile);
+        width: 100%;
+    }
+    
+    .text_content {
+        margin-bottom: 27px;
+    }
+    
+    .slider_card h3 {
+        margin-bottom: 12px;
+    }
+    
+    .slider_card h3 span {
+        display: block;
+        font-weight: 700;
+        letter-spacing: 0em;
+    }
+    
+    .title {
+        font-size: 26px;
+        line-height: 34px;
+    }
+    
+    .subtitle {
+        font-size: 14px;
+        line-height: 18.12px;
+    
+        margin-top: 5px;
+    }
+    
+    .service_list li {
+        font-size: 14px;
+        line-height: 20px;
+    
+    }
+
+    .prices {
+        margin-top: 17px;
+    }
+    
+    .prices span {
+        letter-spacing: 0em;
+        font-weight: 400;
+    }
+    
+    .new_price {
+        font-size: 18px;
+        line-height: 23px;
+    
+        margin-right: 10px;
+    }
+    
+    .old_price, .old_price s {
+        font-size: 14px;
+        line-height: 18.12px;
+    }
+    
+    .btns button {
+        font-weight: 400;
+        width: 137px;
+        margin-right: 6px;
+    }
+    
 }
