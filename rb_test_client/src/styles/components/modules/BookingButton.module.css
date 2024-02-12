@@ -1,0 +1,46 @@
+.btn {
+    width: 196px;
+    height: 43px;
+    border-radius: 50px;
+
+    color: var(--light-font);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px; /* 150% */
+
+    background: var(--btn-green);
+
+    stroke: none;
+    border: none;
+}
+
+.btn:hover {
+    cursor: pointer;
+    /* Сделать темнее */
+    background-color: var(--btn-ligth-green);
+}
+
+.btn:active {
+    background-color: var(--btn-ligth-green);
+}
+
+.white_btn, .white_btn:focus, .white_btn:hover {
+    color: var(--green-font);
+    background: var(--btn-white);
+}
+    
+.white_btn:active {
+    /* color: var(--btn-white);
+    background: var(--green-font); */
+    color: var(--green-font);
+    
+    background-color: var(--semi-middle-gray);
+}
+
+@media screen and (max-width: 1140px) and (orientation: portrait) { 
+    .btn {
+        font-weight: 700;
+    }
+    
+}

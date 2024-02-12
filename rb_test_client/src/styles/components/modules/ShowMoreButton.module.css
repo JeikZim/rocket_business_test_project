@@ -1,0 +1,35 @@
+.btn {
+    width: 196px;
+    height: 43px;
+    border-radius: 50px;
+
+    color: var(--btn-green);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px; /* 150% */
+
+    background-color: transparent;
+}
+
+.btn, .btn:focus {
+
+    stroke: none;
+    border: 1px solid var(--btn-green);
+}
+
+.btn:hover {
+    cursor: pointer;
+
+    color: var(--light-font);
+    
+    border: 1px solid none;
+
+    background-color: var(--btn-green);
+}
+
+.btn:active {
+    border: none;
+
+    background-color: var(--btn-ligth-green);
+}
