@@ -98,16 +98,16 @@
     background-color: var(--nav-bg);
 }
 
-.left svg {
+/* .left svg {
     display: none;
-}
+} */
 
 @media screen and (max-width: 1140px) and (orientation: portrait) { 
     .location svg, .location .subtitle, .phone_number img, .bottom, .btn_wrapper {
         display: none;
     }
 
-    .wrapper { 
+    .up .wrapper { 
         position: relative;
         height: var(--header-height-mobile);
 
@@ -115,7 +115,6 @@
     }
 
     .up, .up .wrapper {
-        
         background-color: var(--header-bg-mobile);
     }
 

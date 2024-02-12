@@ -13,6 +13,8 @@
     position: absolute;
     top: 0;
     right: 0;
+
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
 }
 
 .slider_card .skew {
@@ -34,6 +36,8 @@
     padding-bottom: 56px;
     padding-left: 63px;
 
+    box-sizing: border-box;
+    height: var(--slider-height-desktop);
     width: calc(var(--content-feed-width) / 2);
 }
 
@@ -60,6 +64,9 @@
 .subtitle {
     font-size: 22px;
     line-height: 28px;
+
+    margin-top: 2px;
+    margin-left: 1px;
 }
 
 .service_list li {

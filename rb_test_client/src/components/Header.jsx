@@ -10,7 +10,6 @@ import IconLocationSrc from "../assets/ui-icon_location.svg";
 import DATA from "../data/global.json";
 
 import s from "../styles/components/Header.module.css";
-import menuStyles from "../styles/components/Menu.module.css";
 
 import { getMenuClosses, openCloseMenu } from "./Menu";
 

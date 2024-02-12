@@ -3,11 +3,11 @@
     "QUESTIONS": [
         {
             "TITLE": "Заголовок часто задаваемого вопроса",
-            "CONTENT": [ "Blandit et et ac non interdum odio tristique diam vestibulum. Velit in quis consequat lacus fringilla amet elementum pharetra massa. Morbi euismod nulla cras adipiscing tristique aliquet purus adipiscing. " ]
+            "CONTENT": [ "<u>Blandit</u> et et ac non <s>interdum</s> odio tristique diam vestibulum. Velit in quis consequat lacus fringilla amet elementum pharetra massa. Morbi euismod nulla cras adipiscing tristique aliquet purus adipiscing. " ]
         },
         { "TITLE": "Заголовок часто задаваемого вопроса с двумя абзацами", "CONTENT": [
-            "Blandit et et ac non interdum odio tristique diam vestibulum. Velit in quis consequat lacus fringilla amet elementum pharetra massa. Morbi euismod nulla cras adipiscing tristique aliquet purus adipiscing.", 
-            "<b> Это предложение должно здесь быть.</b> Massa arcu volutpat blandit augue nibh nisl fames. Sodales pharetra nisi quis purus lacinia. Sapien cras posuere dolor tincidunt quis sed adipiscing. "
+            "<i>Blandit et et ac non interdum odio tristique diam vestibulum.</i> Velit in quis consequat lacus fringilla amet elementum pharetra massa. Morbi euismod nulla cras adipiscing tristique aliquet purus adipiscing.", 
+            "<b>Это предложение должно здесь быть.</b> Massa arcu volutpat blandit augue nibh nisl fames. Sodales pharetra nisi quis purus lacinia. Sapien cras posuere dolor tincidunt quis sed adipiscing. "
         ]},
         { "TITLE": "Заголовок часто задаваемого вопроса", "CONTENT": ["Абзац 1", "Абзац 2"] },
         { "TITLE": "Заголовок часто задаваемого вопроса", "CONTENT": ["Абзац 1", "Абзац 2", "Абзац 3"] },

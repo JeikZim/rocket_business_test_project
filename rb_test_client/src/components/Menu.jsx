@@ -7,32 +7,33 @@ import { closePopUp } from "./PopUp";
 import s from "../styles/components/Menu.module.css";
 
 export const getMenuClosses = () => {
-    return document.getElementsByClassName(s.wrapper)[0].classList.contains(s.is_closed)
-}
+    return document
+        .getElementsByClassName(s.wrapper)[0]
+        .classList.contains(s.is_closed);
+};
 
 export const openCloseMenu = (menuIsOpen) => {
-    const menuClasses = document.getElementsByClassName(s.wrapper)[0].classList
-    const isOpened = menuIsOpen !== undefined ? menuIsOpen : !menuClasses.contains(s.is_closed)
+    const menuClasses = document.getElementsByClassName(s.wrapper)[0].classList;
+    const isOpened =
+        menuIsOpen !== undefined
+            ? menuIsOpen
+            : !menuClasses.contains(s.is_closed);
 
     if (isOpened) {
         menuClasses.add(s.is_closed);
-    } 
-    else {
+    } else {
         closePopUp();
         menuClasses.remove(s.is_closed);
     }
-}
-
-// TODO: Исправить баг: когда через Menu открывается PopUp - то Menu закрывается, но CrossButton остаётся в состаянии menuIsOpen 
+};
 
 function Menu() {
-
     return (
         <div className={`${s.wrapper} ${s.is_closed}`}>
-            <div className={s.nav_wrapper}>    
+            <div className={s.nav_wrapper}>
                 <Navbar />
             </div>
-            <div className={s.btn_wrapper}>   
+            <div className={s.btn_wrapper}>
                 <BookingButton inMenu={true} />
             </div>
         </div>

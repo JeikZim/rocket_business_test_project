@@ -6,6 +6,9 @@ import DATA from "../data/components/pop_up.json";
 
 import s from "../styles/components/PopUp.module.css";
 
+import validator from "validator";
+
+
 export const openPopUp = () => {
     document
             .getElementsByClassName(s.wrapper)[0]
@@ -36,11 +39,10 @@ function PopUp() {
 
     const sendData = useCallback(async () => {
         try {
-            if (!form.fullname || !form.email || !form.phoneNumber) {
-                console.error("Заполните поля");
-            }
-
-            // Остальная валидация
+            if (!form.fullname || !form.email || !form.phoneNumber) return alert("Заполните поля");
+            if (!validator.isAlpha(form.fullname, 'ru-RU')) return alert("В ФИО могут содержаться только буквы");
+            if (!validator.isMobilePhone(form.phoneNumber)) return alert("Некорректный номер телефона");
+            if (!validator.isEmail(form.email)) return alert("Некорректный email-адрес");
 
             const response = await request("api/sendMail", "POST", form);
 
