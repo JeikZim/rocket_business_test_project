@@ -22,7 +22,7 @@ export const closePopUp = () => {
 };
 
 function PopUp() {
-    let { loading, request, error, clearError } = useHttp();
+    let {/* loading,*/ request /*, error, clearError*/ } = useHttp();
 
     const [form, setForm] = useState({
         fullname: "",
@@ -59,7 +59,7 @@ function PopUp() {
         } catch (err) {
             console.error(err.message);
         }
-    }, [form, setForm]);
+    }, [form, setForm, request]);
 
     return (
         <div className={`${s.wrapper} ${s.is_closed}`}>

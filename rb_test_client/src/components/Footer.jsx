@@ -25,17 +25,17 @@ function SocialMediaIconsGroup() {
     return (
         <div className={s.social_media}>
             <div className={s.social_media_icon}>
-                <a target="_blank" href={DATA.LINKS.INSTAGRAM}>
+                <a target="_blank" href={DATA.LINKS.INSTAGRAM} rel="noreferrer" >
                     <img src="./images/ic-instagram.svg" alt="Instagram icon" />
                 </a>
             </div>
             <div className={s.social_media_icon}>
-                <a target="_blank" href={DATA.LINKS.WHATS_APP}>
+                <a target="_blank" href={DATA.LINKS.WHATS_APP} rel="noreferrer" >
                     <img src="./images/ic-whats_app_2.svg" alt="WhatsApp icon" />
                 </a>
             </div>
             <div className={s.social_media_icon}>
-                <a target="_blank" href={DATA.LINKS.TELEGRAM}>
+                <a target="_blank" href={DATA.LINKS.TELEGRAM} rel="noreferrer" >
                     <img src="./images/ic-telegram.png" alt="Telegram icon" />
                 </a>
             </div>

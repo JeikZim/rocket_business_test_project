@@ -1,5 +1,5 @@
 import React, { useCallback } from "react";
-import PopUp, { openPopUp } from "../PopUp";
+import { openPopUp } from "../PopUp";
 
 import DATA from "../../data/components/modules/buttons.json";
 
@@ -16,7 +16,7 @@ function BookButton(props) {
         }
 
         openPopUp();
-    }, []);
+    }, [props.inMenu]);
 
     return (
         <button
